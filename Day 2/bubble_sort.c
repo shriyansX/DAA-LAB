@@ -1,34 +1,46 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main()
-{
-  int array[100], n, c, d, swap;
+#define SIZE 10  // You can change this to any size you want
 
-  printf("Enter number of elements\n");
-  scanf("%d", &n);
-
-  printf("Enter %d integers\n", n);
-
-  for (c = 0; c < n; c++)
-    scanf("%d", &array[c]);
-
-  for (c = 0 ; c < n - 1; c++)
-  {
-    for (d = 0 ; d < n - c - 1; d++)
-    {
-      if (array[d] > array[d+1]) 
-      {
-        swap       = array[d];
-        array[d]   = array[d+1];
-        array[d+1] = swap;
-      }
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        // Last i elements are already sorted
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
     }
-  }
+}
 
-  printf("Sorted list in ascending order:\n");
+int main() {
+    int arr[SIZE];
 
-  for (c = 0; c < n; c++)
-     printf("%d\n", array[c]);
+    // Seed random number generator
+    srand(time(NULL));
 
-  return 0;
+    // Generate random numbers
+    printf("Original Array:\n");
+    for (int i = 0; i < SIZE; i++) {
+        arr[i] = rand() % 100;  // Random numbers between 0 and 99
+        printf("%d ", arr[i]);
+    }
+
+    // Sort the array using bubble sort
+    bubbleSort(arr, SIZE);
+
+    // Print the sorted array
+    printf("\n\nSorted Array:\n");
+    for (int i = 0; i < SIZE; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    printf("\n");
+
+    return 0;
 }
