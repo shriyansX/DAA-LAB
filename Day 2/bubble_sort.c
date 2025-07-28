@@ -2,14 +2,18 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SIZE 10  // You can change this to any size you want
+#define SIZE 10
 
-void bubbleSort(int arr[], int n) {
-    for (int i = 0; i < n - 1; i++) {
-        // Last i elements are already sorted
-        for (int j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                // Swap
+void bubbleSort(int arr[], int n)
+{
+    for (int i = 0; i < n - 1; i++)
+    {
+
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+
                 int temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
@@ -18,25 +22,24 @@ void bubbleSort(int arr[], int n) {
     }
 }
 
-int main() {
+int main()
+{
     int arr[SIZE];
 
-    // Seed random number generator
     srand(time(NULL));
 
-    // Generate random numbers
     printf("Original Array:\n");
-    for (int i = 0; i < SIZE; i++) {
-        arr[i] = rand() % 100;  // Random numbers between 0 and 99
+    for (int i = 0; i < SIZE; i++)
+    {
+        arr[i] = rand() % 100;
         printf("%d ", arr[i]);
     }
 
-    // Sort the array using bubble sort
     bubbleSort(arr, SIZE);
 
-    // Print the sorted array
     printf("\n\nSorted Array:\n");
-    for (int i = 0; i < SIZE; i++) {
+    for (int i = 0; i < SIZE; i++)
+    {
         printf("%d ", arr[i]);
     }
 
