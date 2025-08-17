@@ -9,6 +9,7 @@ DAA LAB/
 ├── Day 1/          # Basic array operations and algorithms
 ├── Day 2/          # Sorting algorithms and GCD implementations
 ├── Day 3/          # Advanced sorting algorithms with analysis
+├── Day 4/          # Heap Sort implementation and analysis
 └── README.md       # This file
 ```
 
@@ -36,6 +37,13 @@ DAA LAB/
   - Ascending data
   - Descending data
   - Random data
+
+### Day 4 - Heap Sort Implementation
+- **Heap Sort**: Implementation with array representation
+  - Build max-heap from array
+  - Heapify procedure
+  - In-place sorting
+  - Time complexity analysis
 
 ## 🛠️ Technologies Used
 
@@ -93,11 +101,20 @@ gcc -o 1 1.c
 - **File I/O**: Comprehensive input/output file handling
 - **Menu-driven interface**: User-friendly program selection
 
+### Day 4 Programs
+- **Heap Sort**: Complete implementation with array representation
+- **In-place sorting**: Efficient memory usage
+- **Time complexity analysis**: O(n log n) in all cases
+- **Visualization**: Step-by-step heap operations
+
 ## 📈 Algorithm Analysis
 
 ### Time Complexities
 - **Bubble Sort**: O(n²) - Best: O(n), Worst: O(n²)
 - **Selection Sort**: O(n²) - Best: O(n²), Worst: O(n²)
+- **Quick Sort**: O(n log n) average, O(n²) worst case
+- **Merge Sort**: O(n log n) in all cases
+- **Heap Sort**: O(n log n) in all cases
 - **Quick Sort**: O(n log n) - Best: O(n log n), Worst: O(n²)
 - **Merge Sort**: O(n log n) - Best: O(n log n), Worst: O(n log n)
 
