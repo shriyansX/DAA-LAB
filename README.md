@@ -10,6 +10,7 @@ DAA LAB/
 ├── Day 2/          # Sorting algorithms and GCD implementations
 ├── Day 3/          # Advanced sorting algorithms with analysis
 ├── Day 4/          # Heap Sort implementation and analysis
+├── Day 5/          # Huffman coding and Knapsack problem
 └── README.md       # This file
 ```
 
@@ -39,11 +40,20 @@ DAA LAB/
   - Random data
 
 ### Day 4 - Heap Sort Implementation
-- **Heap Sort**: Implementation with array representation
   - Build max-heap from array
   - Heapify procedure
   - In-place sorting
   - Time complexity analysis
+
+### Day 5 - Huffman Coding & Knapsack Problem
+- **Huffman Coding**: Implementation of Huffman encoding algorithm for data compression
+  - Construction of Huffman tree
+  - Generation of prefix codes
+  - File-based input/output for encoding
+- **Knapsack Problem**: 0/1 Knapsack dynamic programming solution
+  - Optimal selection of items based on weight and value
+  - Table-based DP approach
+  - Input/output via files
 
 ## 🛠️ Technologies Used
 
@@ -51,6 +61,8 @@ DAA LAB/
 - **Compilers**: GCC (GNU Compiler Collection)
 - **File I/O**: Standard C file operations
 - **Data Structures**: Arrays, dynamic memory allocation
+- **Trees**: Used in Huffman coding (Day 5)
+- **Dynamic Programming Table**: Used in Knapsack problem (Day 5)
 
 ## 📋 Prerequisites
 
@@ -102,27 +114,35 @@ gcc -o 1 1.c
 - **Menu-driven interface**: User-friendly program selection
 
 ### Day 4 Programs
-- **Heap Sort**: Complete implementation with array representation
-- **In-place sorting**: Efficient memory usage
-- **Time complexity analysis**: O(n log n) in all cases
-- **Visualization**: Step-by-step heap operations
 
-## 📈 Algorithm Analysis
+### Day 5 Programs
+- **Huffman Coding**: Efficient data compression using prefix codes
+  - Builds Huffman tree from input frequencies
+  - Generates and displays Huffman codes
+  - Reads input and writes encoded output to files
+- **Knapsack Problem**: Solves 0/1 knapsack using dynamic programming
+  - Finds optimal subset of items for maximum value
+  - Table-based DP solution with file input/output
+  - Displays selected items and total value
+
 
 ### Time Complexities
 - **Bubble Sort**: O(n²) - Best: O(n), Worst: O(n²)
-- **Selection Sort**: O(n²) - Best: O(n²), Worst: O(n²)
 - **Quick Sort**: O(n log n) average, O(n²) worst case
 - **Merge Sort**: O(n log n) in all cases
 - **Heap Sort**: O(n log n) in all cases
 - **Quick Sort**: O(n log n) - Best: O(n log n), Worst: O(n²)
 - **Merge Sort**: O(n log n) - Best: O(n log n), Worst: O(n log n)
+ - **Huffman Coding**: O(n log n) for building tree and generating codes
+ - **Knapsack (0/1)**: O(nW) where n = number of items, W = knapsack capacity
 
 ### Space Complexities
 - **Bubble Sort**: O(1)
 - **Selection Sort**: O(1)
 - **Quick Sort**: O(log n) - Average case
 - **Merge Sort**: O(n)
+ - **Huffman Coding**: O(n) for tree and code storage
+ - **Knapsack (0/1)**: O(nW) for DP table
 
 ## 🎯 Key Learning Outcomes
 
@@ -132,17 +152,18 @@ gcc -o 1 1.c
 4. **Performance Comparison**: Real-world algorithm performance testing
 5. **File Handling**: Input/output operations with files
 6. **Error Handling**: Robust program design with validation
+7. **Data Compression**: Learn Huffman coding for efficient encoding
+8. **Optimization Techniques**: Apply dynamic programming to solve knapsack
 
 ## 📝 File Descriptions
 
 ### Input Files
-- `input.txt`, `input1.txt`: Test data for Day 1 programs
-- `inGcd.dat`, `inDec.dat`: Input files for Day 2 programs
-- `inAsce.dat`, `inDesc.dat`, `inRand.dat`: Test data for Day 3 programs
+ - `huffman_input.txt`: Input for Huffman coding (Day 5)
+ - `knapsack_input.txt`: Input for Knapsack problem (Day 5)
 
 ### Output Files
-- `outGcd.dat`, `outBin.dat`: Output files for Day 2 programs
-- `outQuickAsce.dat`, `outMergeAsce.dat`: Sorted output files for Day 3
+ - `huffman_output.txt`: Encoded output for Huffman coding (Day 5)
+ - `knapsack_output.txt`: Output for Knapsack problem (Day 5)
 
 ## 🤝 Contributing
 
