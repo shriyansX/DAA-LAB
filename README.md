@@ -2,6 +2,17 @@
 
 This repository contains the laboratory implementations and solutions for the Design and Analysis of Algorithms (DAA) course. The project is organized by days, with each day focusing on different algorithmic concepts and implementations.
 
+## Table of Contents
+
+- [Project Structure](#project-structure)
+- [Algorithms Implemented](#algorithms-implemented)
+- [How to Compile and Run](#how-to-compile-and-run)
+- [Program Features](#program-features)
+- [Day 6 - Minimum Spanning Trees (MST)](#day-6---minimum-spanning-trees-mst)
+- [File Descriptions](#file-descriptions)
+- [Contributing](#contributing)
+- [CI / Build Checks](#ci--build-checks)
+
 ## 📁 Project Structure
 
 ```
@@ -11,6 +22,7 @@ DAA LAB/
 ├── Day 3/          # Advanced sorting algorithms with analysis
 ├── Day 4/          # Heap Sort implementation and analysis
 ├── Day 5/          # Huffman coding and Knapsack problem
+├── Day 6/          # Minimum Spanning Tree algorithms (Kruskal & Prim)
 └── README.md       # This file
 ```
 
@@ -55,6 +67,13 @@ DAA LAB/
   - Table-based DP approach
   - Input/output via files
 
+### Day 6 - Minimum Spanning Trees (MST)
+- **Kruskal's Algorithm**: Implementation for finding MST using edge-sorting and union-find
+  - Reads an undirected graph (edge list / adjacency matrix) and outputs MST edges and total weight
+- **Prim's Algorithm**: Implementation using adjacency matrix or priority queue
+  - Builds MST starting from a chosen source vertex
+  - Example input files included for testing (see File Descriptions)
+
 ## 🛠️ Technologies Used
 
 - **Language**: C
@@ -95,6 +114,24 @@ gcc -o 1 1.c
 ./1
 ```
 
+### Windows (PowerShell) — compile & run
+
+If you're on Windows and using MinGW or MSYS2 (or another GCC distribution), use PowerShell commands:
+
+```powershell
+# Change to a day's folder and compile a single C program
+Set-Location -Path 'C:\Users\shriy\Desktop\DAA LAB\Day 1'
+gcc -o 1.exe 1.c -Wall
+
+# Run the compiled executable
+.\1.exe
+
+# Compile all .c files in a folder to .exe files (simple loop)
+Get-ChildItem -Filter *.c | ForEach-Object { gcc -o ($_.BaseName + '.exe') $_.FullName -Wall }
+```
+
+If you want a helper script to compile all files on Windows, I can add one on request.
+
 ## 📊 Program Features
 
 ### Day 1 Programs
@@ -126,6 +163,18 @@ gcc -o 1 1.c
   - Displays selected items and total value
 
 
+### Day 6 Programs
+- **Kruskal's Algorithm (Day 6)**: Implements Kruskal's MST algorithm. Files:
+  - `Kruskals.c` — source code
+  - `Kruskals.exe` — compiled executable (if built)
+- **Prim's Algorithm (Day 6)**: Implements Prim's MST algorithm. Files:
+  - `Prims.c` — source code
+  - `Prims.exe` — compiled executable (if built)
+
+Input/data files in Day 6:
+- `inUnAdjMat.dat` — sample input adjacency matrix for undirected graphs used by MST programs
+
+
 ### Time Complexities
 - **Bubble Sort**: O(n²) - Best: O(n), Worst: O(n²)
 - **Quick Sort**: O(n log n) average, O(n²) worst case
@@ -135,6 +184,10 @@ gcc -o 1 1.c
 - **Merge Sort**: O(n log n) - Best: O(n log n), Worst: O(n log n)
  - **Huffman Coding**: O(n log n) for building tree and generating codes
  - **Knapsack (0/1)**: O(nW) where n = number of items, W = knapsack capacity
+
+Additional algorithms in Day 6 (MST):
+- **Kruskal's Algorithm**: O(E log E) due to sorting edges (E = number of edges)
+- **Prim's Algorithm**: O(E + V log V) when using a binary heap / priority queue (V = vertices)
 
 ### Space Complexities
 - **Bubble Sort**: O(1)
@@ -173,6 +226,10 @@ This is a laboratory repository for educational purposes. If you find any bugs o
 2. Create a feature branch
 3. Make your changes
 4. Submit a pull request
+
+## CI / Build Checks
+
+No CI workflows are included by default. If you'd like a lightweight GitHub Actions workflow to compile the C files on push (Ubuntu and/or Windows runners), I can add one.
 
 ## 📚 References
 
