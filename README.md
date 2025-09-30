@@ -1,4 +1,4 @@
-# DAA LAB - Design and Analysis of Algorithms Laboratory 6
+# DAA LAB - Design and Analysis of Algorithms Laboratory
 
 This repository contains the laboratory implementations and solutions for the Design and Analysis of Algorithms (DAA) course. The project is organized by days, with each day focusing on different algorithmic concepts and implementations.
 
