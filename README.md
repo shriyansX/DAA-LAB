@@ -1,6 +1,6 @@
-# DAA LAB - Design and Analysis of Algorithms Laboratory
+# DAA LAB — Design & Analysis of Algorithms (Lab)
 
-This repository contains the laboratory implementations and solutions for the Design and Analysis of Algorithms (DAA) course. The project is organized by days, with each day focusing on different algorithmic concepts and implementations.
+This repository contains C lab exercises grouped by lab day. The README below documents the current folder layout, files, and quick compile/run instructions for Windows and Unix-like systems.
 
 ## Table of Contents
 
@@ -9,6 +9,7 @@ This repository contains the laboratory implementations and solutions for the De
 - [How to Compile and Run](#how-to-compile-and-run)
 - [Program Features](#program-features)
 - [Day 6 - Minimum Spanning Trees (MST)](#day-6---minimum-spanning-trees-mst)
+- [Day 7 - Shortest Paths and LCS](#day-7---shortest-paths-and-lcs)
 - [File Descriptions](#file-descriptions)
 - [Contributing](#contributing)
 - [CI / Build Checks](#ci--build-checks)
@@ -23,6 +24,7 @@ DAA LAB/
 ├── Day 4/          # Heap Sort implementation and analysis
 ├── Day 5/          # Huffman coding and Knapsack problem
 ├── Day 6/          # Minimum Spanning Tree algorithms (Kruskal & Prim)
+├── Day 7/          # Shortest paths (Dijkstra) and LCS
 └── README.md       # This file
 ```
 
@@ -73,6 +75,12 @@ DAA LAB/
 - **Prim's Algorithm**: Implementation using adjacency matrix or priority queue
   - Builds MST starting from a chosen source vertex
   - Example input files included for testing (see File Descriptions)
+
+### Day 7 - Shortest Paths and LCS
+- **Dijkstra's Algorithm**: Single-source shortest paths on weighted graphs with non-negative weights
+  - Works with adjacency matrix input; outputs shortest distances and paths
+- **Longest Common Subsequence (LCS)**: Dynamic programming approach
+  - Computes LCS length (and can be extended to reconstruct the sequence)
 
 ## 🛠️ Technologies Used
 
@@ -175,6 +183,18 @@ Input/data files in Day 6:
 - `inUnAdjMat.dat` — sample input adjacency matrix for undirected graphs used by MST programs
 
 
+### Day 7 Programs
+- **Dijkstra's Algorithm (Day 7)**: Implements single-source shortest path on directed/undirected graphs. Files:
+  - `Dijkstra.c` — source code
+  - `Dijkstra.exe` — compiled executable (if built)
+- **Longest Common Subsequence (LCS) (Day 7)**: Computes LCS length between two strings. Files:
+  - `Lcs.c` — source code
+  - `Lcs.exe` — compiled executable (if built)
+
+Input/data files in Day 7:
+- `inDiAdjMat1.dat` — sample input adjacency matrix (directed) used by Dijkstra's algorithm
+
+
 ### Time Complexities
 - **Bubble Sort**: O(n²) - Best: O(n), Worst: O(n²)
 - **Quick Sort**: O(n log n) average, O(n²) worst case
@@ -189,6 +209,10 @@ Additional algorithms in Day 6 (MST):
 - **Kruskal's Algorithm**: O(E log E) due to sorting edges (E = number of edges)
 - **Prim's Algorithm**: O(E + V log V) when using a binary heap / priority queue (V = vertices)
 
+Additional algorithms in Day 7:
+- **Dijkstra's Algorithm**: O(V²) with adjacency matrix; O((V + E) log V) with a min-heap and adjacency lists
+- **LCS**: O(mn) where m and n are the lengths of the two strings
+
 ### Space Complexities
 - **Bubble Sort**: O(1)
 - **Selection Sort**: O(1)
@@ -196,6 +220,8 @@ Additional algorithms in Day 6 (MST):
 - **Merge Sort**: O(n)
  - **Huffman Coding**: O(n) for tree and code storage
  - **Knapsack (0/1)**: O(nW) for DP table
+ - **Dijkstra's Algorithm**: O(V) for distance/visited arrays (plus graph storage)
+ - **LCS**: O(mn) for the DP table (can be optimized to O(min(m, n)) for length-only)
 
 ## 🎯 Key Learning Outcomes
 
