@@ -10,6 +10,7 @@ This repository contains C lab exercises grouped by lab day. The README below do
 - [Program Features](#program-features)
 - [Day 6 - Minimum Spanning Trees (MST)](#day-6---minimum-spanning-trees-mst)
 - [Day 7 - Shortest Paths and LCS](#day-7---shortest-paths-and-lcs)
+- [Sessional (Final Lab)](#sessional-final-lab)
 - [File Descriptions](#file-descriptions)
 - [Contributing](#contributing)
 - [CI / Build Checks](#ci--build-checks)
@@ -25,6 +26,7 @@ DAA LAB/
 ├── Day 5/          # Huffman coding and Knapsack problem
 ├── Day 6/          # Minimum Spanning Tree algorithms (Kruskal & Prim)
 ├── Day 7/          # Shortest paths (Dijkstra) and LCS
+├── Sessional/      # Final lab exam solutions (descending mergesort, LCS)
 └── README.md       # This file
 ```
 
@@ -193,6 +195,33 @@ Input/data files in Day 6:
 
 Input/data files in Day 7:
 - `inDiAdjMat1.dat` — sample input adjacency matrix (directed) used by Dijkstra's algorithm
+
+
+## Sessional (Final Lab)
+
+- The final lab exam (sessional) was completed successfully — congratulations to the team!
+- Folder: `Sessional/` contains the implementations submitted for the sessional.
+
+Sessional files (current):
+
+- `descendingmergesort.c`, `descendingmergesort.exe` — a variation of merge sort producing a descending-ordered output
+- `lcs.c`, `lcs.exe` — Longest Common Subsequence (LCS) implementation using dynamic programming
+
+How to build and run the sessional programs (PowerShell example):
+
+```powershell
+Set-Location -Path 'C:\Users\shriy\Desktop\DAA LAB\Sessional'
+gcc -o descendingmergesort.exe descendingmergesort.c -Wall -O2
+.\descendingmergesort.exe
+
+gcc -o lcs.exe lcs.c -Wall -O2
+.\lcs.exe
+```
+
+Notes:
+
+- Check the top of each `.c` file for expected input format. Some programs read from files or prompt interactively.
+- If you want, I can add small per-folder README files inside `Sessional/` with example inputs and expected outputs.
 
 
 ### Time Complexities
